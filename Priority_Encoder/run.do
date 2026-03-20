@@ -6,5 +6,8 @@ vlog tb_priority_enc4.v
 
 vsim -voptargs=+acc tb_priority_enc4
 
-add wave -r
+add wave -r /*
+coverage save -onexit coverage.ucdb
+
 run -all
+coverage report -details
